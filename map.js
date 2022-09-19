@@ -170,11 +170,12 @@ d3.csv("data/presidential_results.csv", function (data) {
 			.attr('class', 'features')
         //Top Title
         svg.append('text')
-            //.attr('x', (width / 2))
-            //.attr('y', height / 2)
-            .attr('class', 'title')
-            .attr('text-anchor', 'middle')
-            .text('% Voter turnout Vs Invalid votes')
+			.attr('x', (width / 2))             
+			.attr('y', height/2)
+			.attr('text-anchor', 'middle')  
+			.style('font-size', '14px')
+			.style('fill', 'Black')
+			.text("Votes per candidate per district");
         //End Top Title
 
 		// Bind data and create one path per GeoJSON feature

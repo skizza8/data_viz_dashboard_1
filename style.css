@@ -157,3 +157,15 @@ svg {
 	shape-rendering: crispEdges;
   }
 
+  .axisWhite line{
+    stroke: white;
+  }
+  
+  .axisWhite path{
+    stroke: white;
+  }
+  
+  .axisWhite text{
+    fill: white;
+  }
+

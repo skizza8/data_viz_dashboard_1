@@ -174,6 +174,7 @@ function drawScatterChart() {
             .range([0, width]);
         svg.append("g")
             .attr("transform", "translate(0," + height + ")")
+            .attr('class', 'axis')
             .call(d3.axisBottom(x));
 
         // Add Y axis
@@ -181,7 +182,14 @@ function drawScatterChart() {
             .domain([min_turnup, max_turnup])
             .range([height, 0]);
         svg.append("g")
+            .attr('class', 'axis')
             .call(d3.axisLeft(y));
+
+        //Draw grid
+        svg.append('g')
+            .attr('class', 'grid-hline')
+            .call(d3.axisLeft().scale(y).tickSize(-width, 0, 0).tickFormat(''))
+        //End Draw grid
 
         //Top Title
         svg.append('text')
