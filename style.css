@@ -169,3 +169,7 @@ svg {
     fill: white;
   }
 
+  #result {
+    background: rgb(248, 245, 245);
+  }
+

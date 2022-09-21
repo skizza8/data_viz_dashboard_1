@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Map</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header black-bg">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12 pt-2 pb-2 text-white">
+          <nav class="navbar navbar-expand-sm navbar-dark">
+            <!-- Brand -->
+            <a class="navbar-brand" href="index.html">Makerere - Data ViZ</a>
+
+            <!-- Links -->
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="map.html">Election Map</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="text_analysis.html">Text Analysis</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="ner.html">NER Model</a>
+              </li>
+
+              <!-- Dropdown -->
+              <!--
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                              Dropdown link
+                            </a>
+                            <div class="dropdown-menu">
+                              <a class="dropdown-item" href="#">Link 1</a>
+                              <a class="dropdown-item" href="#">Link 2</a>
+                              <a class="dropdown-item" href="#">Link 3</a>
+                            </div>
+                          </li>
+                          -->
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="body main-bg pt-2 pb-2 pl-2 pr-2">
+    <div class="container-fluid" style="height: 100%">
+      <div class="row">
+        <div class="col-md-12">
+
+          <form id='ner' class='form-horizontal'>
+            <div class="form-group">
+              <label class="col-md-12" for="sentence" style="color:white ;">Enter Sentence</label>
+              <div class="col-sm-12">
+                <input type="text" name="sentence" id="sentence" class="form-control" required
+                  data-validation-required-message="Sentence is required">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-offset-3 col-sm-5">
+                <button type="submit" class="btn btn-rounded btn-sm btn-info" name="send_sentence">Send</button>
+                <button type="reset" class="btn btn-rounded btn-sm btn-default">Reset</button>
+              </div>
+            </div>
+          </form>
+
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div id="result" class="table-responsive">
+            <table class="table table-striped">
+
+            </table>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+
+  <script src="ner.js"></script>
+
+</body>
+
+</html>
